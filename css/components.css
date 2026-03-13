@@ -307,8 +307,8 @@
 .proc-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.75; }
 
 @media (max-width: 900px) {
-  .process-item { grid-template-columns: 50px 1fr; }
-  .proc-desc { display: none; }
+  .process-item { grid-template-columns: 50px 1fr; gap: 1rem; }
+  .proc-desc { font-size: 0.82rem; }
 }
 
 /* ============================================
@@ -524,9 +524,9 @@
   font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
-  cursor: none;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
+@media (hover: hover) { .cta-btn-primary { cursor: none; } }
 .cta-btn-primary:hover {
   background: var(--accent2);
   transform: translateY(-2px);
@@ -545,9 +545,9 @@
   font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
-  cursor: none;
   transition: background 0.2s, transform 0.2s;
 }
+@media (hover: hover) { .cta-btn-ghost { cursor: none; } }
 .cta-btn-ghost:hover {
   background: rgba(77,255,195,0.08);
   transform: translateY(-2px);

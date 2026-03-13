@@ -196,4 +196,7 @@
     line-height: 1.1;
     letter-spacing: -0.02em;
   }
+  .hero-blob-1, .hero-blob-2, .hero-blob-3 {
+    animation: none;
+  }
 }

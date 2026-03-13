@@ -126,7 +126,7 @@ const translations = {
     footer_col_company:  'Company',
     footer_col_contact:  'Contact',
     footer_about:        'About',
-    footer_copy:         '© 2025 ATIS Digital. All rights reserved.',
+    footer_copy:         '© 2026 ATIS Digital. All rights reserved.',
     footer_credit:       'Designed & built by ATIS Digital',
     wa_tooltip:          "Let's Talk",
   },
@@ -250,7 +250,7 @@ const translations = {
     footer_col_company:  'Empresa',
     footer_col_contact:  'Contacto',
     footer_about:        'Quiénes Somos',
-    footer_copy:         '© 2025 ATIS Digital. Todos los derechos reservados.',
+    footer_copy:         '© 2026 ATIS Digital. Todos los derechos reservados.',
     footer_credit:       'Diseñado y desarrollado por ATIS Digital',
     wa_tooltip:          '¿Hablamos?',
   },
@@ -374,7 +374,7 @@ const translations = {
     footer_col_company:  'Unternehmen',
     footer_col_contact:  'Kontakt',
     footer_about:        'Über uns',
-    footer_copy:         '© 2025 ATIS Digital. Alle Rechte vorbehalten.',
+    footer_copy:         '© 2026 ATIS Digital. Alle Rechte vorbehalten.',
     footer_credit:       'Gestaltet & entwickelt von ATIS Digital',
     wa_tooltip:          'Schreib uns',
   },
@@ -609,8 +609,10 @@ document.addEventListener('DOMContentLoaded', () => {
       whyVisual.style.transform  =
         `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.02,1.02,1.02)`;
 
-      if (logo) logo.style.transform =
-        `translateZ(40px) drop-shadow(0 0 40px rgba(77,255,195,0.4))`;
+      if (logo) {
+        logo.style.transform = 'translateZ(40px)';
+        logo.style.filter    = 'drop-shadow(0 0 40px rgba(77,255,195,0.4))';
+      }
 
       if (glow) {
         glow.style.transform = `translate(${x * 40}px, ${y * 40}px)`;
@@ -620,7 +622,10 @@ document.addEventListener('DOMContentLoaded', () => {
     whyVisual.addEventListener('mouseleave', () => {
       whyVisual.style.transition = 'transform 0.6s ease';
       whyVisual.style.transform  = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)';
-      if (logo) logo.style.transform = 'translateZ(0px)';
+      if (logo) {
+        logo.style.transform = 'translateZ(0px)';
+        logo.style.filter    = '';
+      }
       if (glow) glow.style.transform = 'translate(0,0)';
     });
   }
