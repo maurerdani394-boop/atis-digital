@@ -307,8 +307,8 @@
 .proc-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.75; }
 
 @media (max-width: 900px) {
-  .process-item { grid-template-columns: 50px 1fr; gap: 1rem; }
-  .proc-desc { font-size: 0.82rem; }
+  .process-item { grid-template-columns: 50px 1fr; gap: 0.5rem 1rem; }
+  .proc-desc { font-size: 0.82rem; grid-column: 1 / -1; }
 }
 
 /* ============================================
