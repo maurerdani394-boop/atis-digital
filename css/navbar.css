@@ -29,9 +29,6 @@ nav.scrolled, nav.menu-open {
   width: auto;
   display: block;
 }
-.ft-brand .logo-img {
-  height: 104px;
-}
 
 .nav-links {
   display: flex;

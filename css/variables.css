@@ -31,6 +31,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-padding-top: 72px;
 }
 
 body {
@@ -160,6 +161,16 @@ h2 em { font-style: normal; color: var(--accent); }
 @keyframes spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
 }
 @keyframes scrollLine {
   0%     { transform: scaleY(0); transform-origin: top; }
